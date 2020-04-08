@@ -1,13 +1,61 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Quotation by email</title>
-</head>
-<body>
-  <h1>New quotation</h1>
-  <p>Hello {{name}},</p>
-  
-  <p>You have recieved a quotation<p>
-</body>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>shaq Support</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/></head>
+    <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #153643;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="padding: 10px 0 30px 0;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
+                        <tr>
+                            <td align="center" bgcolor="#f3f3f3" style="padding: 40px 0 30px 0; background-color: #f3f3f3; font-size: 28px; font-weight: bold;">
+                                <img src="https://www.flash.global/wp-content/uploads/2018/03/Redspher-pin.png" alt="Skoreway" style="display: block;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+                                            <b>Description</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
+                                            Dear Agency,<br><br>
+                                            Quotation on behalf of <b>{{{message.sourceName}}}</b> has been succesfully completed for <b>{{{message.bid.price}}}{{{message.bid.currency}}}</b><br><br>
+                                            Shipment / File Number: <b> {{{message.name}}}</b><br><br>
+                                            <b>Pick - up location</b> (Country / Zip code / City):<br> {{{message.puPlace}}} <br>
+                                            <b>Pick - up date</b> :<br> {{{message.puDate}}} <br><br>
+                                            <b>Delivery location</b> (Country / Zip code / City):<br>{{{message.dePlace}}}  <br>
+                                            <b>Delivery date</b> :<br> {{{message.deDate}}} <br><br>
+                                            <img height="24" src="{{{message.bid.logo}}}" alt=""/>
+
+                                            If you have any questions or concerns, please contact us at: {{{message.tmsConfig.supportemail}}} <br><br><br><br><hr><br>
+                                       
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td width="75%">Redspher, 2020<br>
+                                                    </td>
+                                                    <td align="right" width="25%">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="https://sharedquotation.com/" style="color: #ffffff;">
+                                                                        <img src="https://pbs.twimg.com/ext_tw_video_thumb/1116646366036541440/pu/img/hB2IhlTxDU4dlTaC.jpg" width="128" border="0" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
