@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Palette 120(l) x 80(w)",
+        "length": "120",
+        "width": "80"
+    },
+    {
+        "name": "½ Palette 60(l) x 80(w)",
+        "length": "60",
+        "width": "80"
+    },
+    {
+        "name": "Caisse"
+    },
+    {
+        "name": "Colis"
+    },
+    {
+        "name": "Pli"
+    },
+    {
+        "Longueur/ Tube"
+    }
+]
