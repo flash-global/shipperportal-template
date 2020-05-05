@@ -1,0 +1,30 @@
+[
+    {
+        "name": "S 30(l) x 20(w) x 20(h), 1 kg",
+        "length": "30",
+        "width": "20",
+        "height": "20",
+        "weight": "1"
+    },
+    {
+        "name": "M 40(l) x 20(w) x 20(h), 2 kg",
+        "length": "40",
+        "width": "20",
+        "height": "20",
+        "weight": "2"
+    },
+    {
+        "name": "L 40(l) x 30(w) x 20(h), 5 kg",
+        "length": "40",
+        "width": "30",
+        "height": "20",
+        "weight": "5"
+    },
+    {
+        "name": "XL 60(l) x 40(w) x 30(h), 10 kg",
+        "length": "60",
+        "width": "40",
+        "height": "30",
+        "weight": "10"
+    }
+]
