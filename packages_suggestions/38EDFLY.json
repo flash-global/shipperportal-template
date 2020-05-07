@@ -1,24 +1,90 @@
-[
-    {
-        "name": "Palette 120(l) x 80(w)",
-        "length": "120",
-        "width": "80"
-    },
-    {
-        "name": "½ Palette 60(l) x 80(w)",
-        "length": "60",
-        "width": "80"
-    },
-    {
-        "name": "Caisse"
-    },
-    {
-        "name": "Colis"
-    },
-    {
-        "name": "Pli"
-    },
-    {
-        "name": "Longueur/ Tube"
-    }
-]
+{
+   "pallet":[
+      {
+         "name":"Palette 120(l) x 80(w)",
+         "length":"120",
+         "width":"80",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"½ Palette 60(l) x 80(w)",
+         "length":"60",
+         "width":"80",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Caisse",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Colis",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Pli",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Longueur/ Tube",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      }
+   ],
+   "parcel":[
+      {
+         "name":"Palette 120(l) x 80(w)",
+         "length":"120",
+         "width":"80",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"½ Palette 60(l) x 80(w)",
+         "length":"60",
+         "width":"80",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Caisse",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Colis",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Pli",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      },
+      {
+         "name":"Longueur/ Tube",
+         "length":"",
+         "width":"",
+         "weight":"",
+         "height":""
+      }
+   ]
+}
