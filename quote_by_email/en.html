@@ -22,8 +22,9 @@
                                         <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
                                             Dear Agency,<br><br>
                                             Quotation on behalf of <b>{{{message.sourceName}}}</b> has been succesfully completed for <b>{{{message.bid.price}}}{{{message.bid.currency}}}</b><br><br>
-                                            Shipment / File Number: <b> {{{message.name}}}</b><br><br>
-                                            <b>Pick - up location</b> (Country / Zip code / City):<br> {{{message.puPlace}}} <br>
+                                            Shipment / File Number: <b> {{{quotation.quotation.id}}}</b><br><br>
+                                            <b>Pick - up location</b> (Country / Zip code / City):<br>
+                                            {{{quotation.quotation.ship_from.country_code}}} / {{{quotation.quotation.ship_from.zip_code}}} / {{{quotation.quotation.ship_from.city}}} <br>
                                             <b>Pick - up date</b> :<br> {{{message.puDate}}} <br><br>
                                             <b>Delivery location</b> (Country / Zip code / City):<br>{{{message.dePlace}}}  <br>
                                             <b>Delivery date</b> :<br> {{{message.deDate}}} <br><br>
