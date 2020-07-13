@@ -32,17 +32,35 @@
 
                     <p>Shipment / File Number: <b>{{{quotation.quotation.id}}}</p>
 
-                    <p><b>Pick - up location</b> (Country / Zip code / City):</p>
+                    <p><b>Pick - up location</b></p>
                     <p>{{{quotation.quotation.ship_from.country_code}}} / {{{quotation.quotation.ship_from.zip_code}}} / {{{quotation.quotation.ship_from.city}}}</p>
                     <p>{{{quotation.quotation.ship_from.street}}}</p>
                     <p>{{{quotation.quotation.ship_from.street_other}}}</p>
-                    <p><b>Pick - up date</b>: {{{quotation.quotation.pickup_date}}}</p>
+                    <p><b>Contact (Name / phone / mail) : </b></p>
+                    <p>{{{quotation.sender.lastname}}} {{{quotation.sender.firstname}}} /{{{quotation.sender.phone}}} / {{{quotation.sender.email}}} </p>
+                    <p><b>Pick - up date :</b> {{{quotation.quotation.pickup_date}}}</p>
 
-                    <p><b>Delivery location</b> (Country / Zip code / City):</p>
+                    <p><b>Delivery location</b></p>
                     <p>{{{quotation.quotation.ship_to.country_code}}} / {{{quotation.quotation.ship_to.zip_code}}} / {{{quotation.quotation.ship_to.city}}} </p>
                     <p>{{{quotation.quotation.ship_to.street}}}</p>
                     <p>{{{quotation.quotation.ship_to.street_other}}}</p>
-                    <p><b>Delivery date</b>: {{{quotation.quotation.delivery_date}}}</p>
+                    <p><b>Contact (Name / phone / mail) : </b></p>
+                    <p>{{{quotation.receiver.lastname}}} {{{quotation.receiver.firstname}}} /{{{quotation.receiver.phone}}} / {{{quotation.receiver.email}}} </p>
+                    <p><b>Delivery date :</b> {{{quotation.quotation.delivery_date}}}</p>
+
+                    <p><b>Packages</b></p>
+                    <ul>
+                      {{#quotation.quotation.packages}}
+                      <li>
+                        <b>Quantity </b> {{quantity}} <br>
+                        <b>Width</b> {{width}} <br>
+                        <b>Length</b> {{length}} <br>
+                        <b>Height</b> {{height}} <br>
+                        <b>Weight</b> {{weight}} <br>
+                        <b>Reference</b> {{reference}} <br>
+                      </li>
+                      {{/quotation.quotation.packages}}
+                    </ul>
 
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
