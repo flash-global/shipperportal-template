@@ -1,0 +1,131 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Order confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style type="text/css">
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #6DB8FF;
+      color: #FFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #153643;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="padding: 10px 0 30px 0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="border: 1px solid #cccccc; border-collapse: collapse;">
+          <tr>
+            <td align="center" bgcolor="#f3f3f3" style="padding: 0 auto; background-color: #f3f3f3; font-size: 28px; font-weight: bold;">
+              <img src="https://www.flash.global/wp-content/uploads/2018/03/Redspher-pin.png" alt="redspher" style="display: block;" />
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="color: #153643; font-family: Arial, sans-serif; text-align: center;">
+                    <h1 style="font-size: 32px">Confirmation d'ordre <span style="color:red">#{{orderNumber}}</span></h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
+                    <p>Chère {{lastName}} {{firstName}},</p>
+                    <p>L'ordre {{orderNumber}} a été confirmé. Vous retrouverez les informations de cette expédition ci dessous</p>
+                    <p>
+                      Vous pouvez suivre votre expédition avec ce lien
+                      <a class="btn" href="{{trackingLink}}">Suivre mon expédition</a>
+                    </p>
+                    <br />
+
+                    <hr />
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <th>Lieu de ramassage</th>
+                        <th>Lieu de livraison</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>{{quotation.quotation.ship_from.name}}</p>
+                          <p>{{quotation.quotation.ship_from.street}}</p>
+                          <p>{{quotation.quotation.ship_from.street_other}}</p>
+                          <p>{{quotation.quotation.ship_from.country_code}} / {{quotation.quotation.ship_from.zip_code}} / {{quotation.quotation.ship_from.city}}</p>
+                        </td>
+                        <td>
+                          <p>{{quotation.quotation.ship_to.name}}</p>
+                          <p>{{quotation.quotation.ship_to.street}}</p>
+                          <p>{{quotation.quotation.ship_to.street_other}}</p>
+                          <p>{{quotation.quotation.ship_to.country_code}} / {{quotation.quotation.ship_to.zip_code}} / {{quotation.quotation.ship_to.city}} </p>
+                        </td>
+                      </tr>
+                    </table>
+                    <hr />
+                    <br />
+
+                    <p><b>Paquets</b></p>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <th>Quantité</th>
+                        <th>Largeur</th>
+                        <th>Longueur</th>
+                        <th>Hauteur</th>
+                        <th>Poids</th>
+                        <th>Référence</th>
+                      </tr>
+                      {{#quotation.quotation.packages}}
+                      <tr>
+                        <td>{{quantity}}</td>
+                        <td>{{width}}</td>
+                        <td>{{length}}</td>
+                        <td>{{height}}</td>
+                        <td>{{weight}}</td>
+                        <td>{{reference}}</td>
+                      </tr>
+                      {{/quotation.quotation.packages}}
+                    </table>
+
+                    <br />
+                    <p><b>Références</b></p>
+                    <ul>
+                      {{#quotation.references}}
+                      <li>
+                        <b>{{id}} : </b> {{value}} <br>
+                      </li>
+                      {{/quotation.references}}
+                    </ul>
+                    <hr />
+                    <p><b>Type de véhicule</b> : {{vehicleType}}</p>
+                    <p><b>Distance (km)</b> : {{distance}}</p>
+                    <p><b>Prix</b> : {{price}}</p>
+                    <br />
+                    <p>
+                      Vous pouvez suivre votre expédition avec ce lien
+                      <a class="btn" href="{{trackingLink}}">Suivre mon expédition</a>
+                    </p>
+
+                    <br />
+                    <hr>
+                    <br>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="75%">Redspher, 2020<br>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
