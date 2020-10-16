@@ -39,26 +39,26 @@
 
                     <p>Une nouvelle cotation a été crée sur shipper portal.</p>
                     <p>Vous pouvez séléctionner une offre en cliquant sur ce lien</p>
-                    <p><a class="btn" href="{{{shipmentLink}}}">Séléctionner une offre maintenant</a></p>
+                    <p><a class="btn" href="{{shipmentLink}}">Séléctionner une offre maintenant</a></p>
 
-                    <p>Numéro de dossier <b>{{{quotation.quotation.id}}}</b></p>
+                    <p>Numéro de dossier <b>{{quotation.id}}</b></p>
 
                     <p><b>Adresse de ramassage</b></p>
-                    <p>{{{quotation.quotation.ship_from.name}}}</p>
-                    <p>{{{quotation.quotation.ship_from.street}}}</p>
-                    <p>{{{quotation.quotation.ship_from.street_other}}}</p>
-                    <p>{{{quotation.quotation.ship_from.country_code}}} / {{{quotation.quotation.ship_from.zip_code}}} / {{{quotation.quotation.ship_from.city}}}</p>
+                    <p>{{quotation.ship_from.name}}</p>
+                    <p>{{quotation.ship_from.street}}</p>
+                    <p>{{quotation.ship_from.street_other}}</p>
+                    <p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
 
 
                     <p><b>Adresse de livraison</b></p>
-                    <p>{{{quotation.quotation.ship_to.name}}}</p>
-                    <p>{{{quotation.quotation.ship_to.street}}}</p>
-                    <p>{{{quotation.quotation.ship_to.street_other}}}</p>
-                    <p>{{{quotation.quotation.ship_to.country_code}}} / {{{quotation.quotation.ship_to.zip_code}}} / {{{quotation.quotation.ship_to.city}}} </p>
+                    <p>{{quotation.ship_to.name}}</p>
+                    <p>{{quotation.ship_to.street}}</p>
+                    <p>{{quotation.ship_to.street_other}}</p>
+                    <p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}} </p>
 
                     <br />
                     <p>
-                      <a class="btn" href="{{{shipmentLink}}}">Séléctionner une offre maintenant</a>
+                      <a class="btn" href="{{shipmentLink}}">Séléctionner une offre maintenant</a>
                     </p>
 
                     <br />
