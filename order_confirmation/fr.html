@@ -51,16 +51,16 @@
                       </tr>
                       <tr>
                         <td>
-                          <p>{{quotation.quotation.ship_from.name}}</p>
-                          <p>{{quotation.quotation.ship_from.street}}</p>
-                          <p>{{quotation.quotation.ship_from.street_other}}</p>
-                          <p>{{quotation.quotation.ship_from.country_code}} / {{quotation.quotation.ship_from.zip_code}} / {{quotation.quotation.ship_from.city}}</p>
+                          <p>{{quotation.ship_from.name}}</p>
+                          <p>{{quotation.ship_from.street}}</p>
+                          <p>{{quotation.ship_from.street_other}}</p>
+                          <p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
                         </td>
                         <td>
-                          <p>{{quotation.quotation.ship_to.name}}</p>
-                          <p>{{quotation.quotation.ship_to.street}}</p>
-                          <p>{{quotation.quotation.ship_to.street_other}}</p>
-                          <p>{{quotation.quotation.ship_to.country_code}} / {{quotation.quotation.ship_to.zip_code}} / {{quotation.quotation.ship_to.city}} </p>
+                          <p>{{quotation.ship_to.name}}</p>
+                          <p>{{quotation.ship_to.street}}</p>
+                          <p>{{quotation.ship_to.street_other}}</p>
+                          <p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}} </p>
                         </td>
                       </tr>
                     </table>
@@ -77,7 +77,7 @@
                         <th>Poids</th>
                         <th>Référence</th>
                       </tr>
-                      {{#quotation.quotation.packages}}
+                      {{#quotation.packages}}
                       <tr>
                         <td>{{quantity}}</td>
                         <td>{{width}}</td>
@@ -86,7 +86,7 @@
                         <td>{{weight}}</td>
                         <td>{{reference}}</td>
                       </tr>
-                      {{/quotation.quotation.packages}}
+                      {{/quotation.packages}}
                     </table>
 
                     <br />
