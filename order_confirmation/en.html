@@ -36,7 +36,7 @@
                 <tr>
                   <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
                     <p>Dear {{lastName}} {{firstName}},</p>
-                    <p>The order {{orderNumber}} has been validated</p>
+                    <p>The order {{quotation.id}} has been validated</p>
                     <p>
                       You can follow your shipment by clicking the following link
                       <a class="btn" href="{{trackingLink}}">Follow my shipment</a>
@@ -99,7 +99,7 @@
                       {{/quotation.references}}
                     </ul>
                     <hr />
-                    <p><b>Vehicle type</b> : {{quotation.vehicleTypeLabel}}</p>
+                    <p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
                     <p><b>Distance (km)</b> : {{quotation.distance}}</p>
                     <p><b>Price</b> : {{quotation.selectedOffer.price}}</p>
                     <br />
