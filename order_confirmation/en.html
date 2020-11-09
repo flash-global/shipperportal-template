@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                   <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
-                    <p>Dear {{lastName}} {{firstName}},</p>
+                    <p>Dear {{firstName}} {{lastName}},</p>
                     <p>The order {{quotation.id}} has been validated</p>
                     <p>
                       You can follow your shipment by clicking the following link
@@ -71,10 +71,10 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <th>Quantity</th>
-                        <th>Width</th>
-                        <th>Length</th>
-                        <th>Height</th>
-                        <th>Weight</th>
+                        <th>Width (cm)</th>
+                        <th>Length (cm)</th>
+                        <th>Height (cm)</th>
+                        <th>Weight (kg)</th>
                         <th>Reference</th>
                       </tr>
                       {{#quotation.packages}}
@@ -92,6 +92,7 @@
                     <br />
                     <p><b>References</b></p>
                     <ul>
+
                       {{#quotation.references}}
                       <li>
                         <b>{{id}} : </b> {{value}} <br>
@@ -99,8 +100,8 @@
                       {{/quotation.references}}
                     </ul>
                     <hr />
-                    <p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
-                    <p><b>Distance (km)</b> : {{quotation.distance}}</p>
+                    <!--<p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
+                    <p><b>Distance (km)</b> : {{quotation.distance}}</p>-->
                     <p><b>Price</b> : {{quotation.selectedOffer.price}}</p>
                     <br />
                     <p>
