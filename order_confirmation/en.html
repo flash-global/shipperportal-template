@@ -15,16 +15,17 @@
   </style>
 </head>
 
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #153643;">
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #153643; background-color:#EFEFEF">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="800">
+      <tr>
+        <td><img src="https://redspher.com/images/logo-redspher.svg" width="200" alt="redspher" style="display: block;" /></td>
+        <br>
+      </tr>
+    </table>
     <tr>
       <td style="padding: 10px 0 30px 0;">
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="border: 1px solid #cccccc; border-collapse: collapse;">
-          <tr>
-            <td align="center" bgcolor="#f3f3f3" style="padding: 0 auto; background-color: #f3f3f3; font-size: 28px; font-weight: bold;">
-              <img src="https://www.flash.global/wp-content/uploads/2018/03/Redspher-pin.png" alt="redspher" style="display: block;" />
-            </td>
-          </tr>
           <tr>
             <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -50,13 +51,13 @@
                         <th>Delivery location</th>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="center">
                           <p>{{quotation.ship_from.name}}</p>
                           <p>{{quotation.ship_from.street}}</p>
                           <p>{{quotation.ship_from.street_other}}</p>
                           <p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
                         </td>
-                        <td>
+                        <td align="center">
                           <p>{{quotation.ship_to.name}}</p>
                           <p>{{quotation.ship_to.street}}</p>
                           <p>{{quotation.ship_to.street_other}}</p>
@@ -79,12 +80,12 @@
                       </tr>
                       {{#quotation.packages}}
                       <tr>
-                        <td>{{quantity}}</td>
-                        <td>{{width}}</td>
-                        <td>{{length}}</td>
-                        <td>{{height}}</td>
-                        <td>{{weight}}</td>
-                        <td>{{reference}}</td>
+                        <td align="center">{{quantity}}</td>
+                        <td align="center">{{width}}</td>
+                        <td align="center">{{length}}</td>
+                        <td align="center">{{height}}</td>
+                        <td align="center">{{weight}}</td>
+                        <td align="center">{{reference}}</td>
                       </tr>
                       {{/quotation.packages}}
                     </table>
@@ -102,7 +103,7 @@
                     <hr />
                     <!--<p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
                     <p><b>Distance (km)</b> : {{quotation.distance}}</p>-->
-                    <p><b>Price</b> : {{quotation.selectedOffer.price}}</p>
+                    <p><b>Price</b> : {{quotation.selectedOffer.price}} € Without VAT</p>
                     <br />
                     <p>
                       You can follow your shipment by clicking the following link
