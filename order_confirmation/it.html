@@ -1,0 +1,100 @@
+<p>&nbsp;</p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img style="display: block;" src="https://redspher.com/images/logo-redspher.svg" alt="redspher" width="200" /></td>
+</tr>
+<tr>
+<td style="padding: 10px 0 30px 0;">
+<table style="border: 1px solid #cccccc; border-collapse: collapse;" border="0" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="padding: 40px 30px 40px 30px;" bgcolor="#ffffff">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="color: #153643; font-family: Arial, sans-serif; text-align: center;">
+<h1 style="font-size: 32px;"><strong>Conferma d&rsquo;ordine</strong>&nbsp;<span style="color: red;">#{{quotation.id}}</span></h1>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px 0 30px 0; font-size: 16px; line-height: 20px;">
+<p><span style="font-weight: 400;">Gentile </span>{{firstName}} {{lastName}},</p>
+<p><span style="font-weight: 400;">L&rsquo;ordine</span> {{quotation.id}}<span style="font-weight: 400;">&nbsp;&eacute; stato confermato</span></p>
+<p><span style="font-weight: 400;">Puoi seguire la tua spedizione cliccando sul seguente link</span>&nbsp;<a class="btn" href="{{CSFU_url}}">Segui la mia spedizione</a></p>
+<br /><hr />
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th>Localit&aacute; di ritiro</th>
+<th>Localit&aacute; di consegna</th>
+</tr>
+<tr>
+<td align="center">
+<p>{{quotation.ship_from.name}}</p>
+<p>{{quotation.ship_from.street}}</p>
+<p>{{quotation.ship_from.street_other}}</p>
+<p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
+</td>
+<td align="center">
+<p>{{quotation.ship_to.name}}</p>
+<p>{{quotation.ship_to.street}}</p>
+<p>{{quotation.ship_to.street_other}}</p>
+<p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}}</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr /><br />
+<p><strong>Imballi</strong></p>
+{{#quotation.packages}}{{/quotation.packages}}
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th><strong>Quantit&aacute;</strong></th>
+<th><strong>Larghezza</strong> (cm)</th>
+<th><strong>Lunghezza</strong> (cm)</th>
+<th><strong>Altezza</strong> (cm)</th>
+<th><strong>Peso</strong> (kg)</th>
+<th><strong>Riferimento</strong></th>
+</tr>
+<tr>
+<td align="center">{{quantity}}</td>
+<td align="center">{{width}}</td>
+<td align="center">{{length}}</td>
+<td align="center">{{height}}</td>
+<td align="center">{{weight}}</td>
+<td align="center">{{reference}}</td>
+</tr>
+</tbody>
+</table>
+<br />
+<p><strong>Riferimenti</strong></p>
+<ul>{{#quotation.references}}
+<li><strong>{{id}} : </strong> {{value}}</li>
+{{/quotation.references}}</ul>
+<hr /><!--<p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
+                    <p><b>Distance (km)</b> : {{quotation.distance}}</p>-->
+<p><strong>Prezzo</strong> : {{quotation.selectedOffer.price}} <span style="font-weight: 400;">&euro; IVA esclusa</span></p>
+<br />
+<p><span style="font-weight: 400;">Puoi seguire la tua spedizione cliccando sul seguente link</span>&nbsp;<a class="btn" href="{{CSFU_url}}">Segui la mia spedizione</a></p>
+<br /><hr /><br />
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="75%">Redspher, {{year}}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
