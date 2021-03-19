@@ -2,7 +2,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Order confirmation</title>
+  <title>Confirmación de pedido</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style type="text/css">
     .btn {
@@ -31,24 +31,24 @@
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td style="color: #153643; font-family: Arial, sans-serif; text-align: center;">
-                    <h1 style="font-size: 32px">Order confirmation <span style="color:red">#{{quotation.id}}</span></h1>
+                    <h1 style="font-size: 32px">Confirmación de pedido <span style="color:red">#{{quotation.id}}</span></h1>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
-                    <p>Dear {{firstName}} {{lastName}},</p>
-                    <p>The order {{quotation.id}} has been validated</p>
+                    <p>Estimado/a {{firstName}} {{lastName}},</p>
+                    <p>El pedido {{quotation.id}} ha sido validado</p>
                     <p>
-                      You can follow your shipment by clicking the following link
-                      <a class="btn" href="{{CSFU_url}}">Follow my shipment</a>
+                      Puede hacer seguimiento del envío haciendo clic en el siguiente link
+                      <a class="btn" href="{{CSFU_url}}">Seguir mi envio</a>
                     </p>
                     <br />
 
                     <hr />
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <th>Pick - up location</th>
-                        <th>Delivery location</th>
+                        <th>Lugar de recogida</th>
+                        <th>Lugar de entrega</th>
                       </tr>
                       <tr>
                         <td align="center">
@@ -68,15 +68,15 @@
                     <hr />
                     <br />
 
-                    <p><b>Packages</b></p>
+                    <p><b>Paquetes</b></p>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <th>Quantity</th>
-                        <th>Width (cm)</th>
-                        <th>Length (cm)</th>
-                        <th>Height (cm)</th>
-                        <th>Weight (kg)</th>
-                        <th>Reference</th>
+                        <th>Cantidad</th>
+                        <th>Ancho (cm)</th>
+                        <th>Largo (cm)</th>
+                        <th>Alto (cm)</th>
+                        <th>Peso (kg)</th>
+                        <th>Referencia</th>
                       </tr>
                       {{#quotation.packages}}
                       <tr>
@@ -91,7 +91,7 @@
                     </table>
 
                     <br />
-                    <p><b>References</b></p>
+                    <p><b>Referencias</b></p>
                     <ul>
 
                       {{#quotation.references}}
@@ -103,11 +103,11 @@
                     <hr />
                     <!--<p><b>Vehicle type</b> : {{vehicleTypeLabel}}</p>
                     <p><b>Distance (km)</b> : {{quotation.distance}}</p>-->
-                    <p><b>Price</b> : {{quotation.selectedOffer.price}} € Without VAT</p>
+                    <p><b>Precio</b> : {{quotation.selectedOffer.price}} € Sin IVA</p>
                     <br />
                     <p>
-                      You can follow your shipment by clicking the following link
-                      <a class="btn" href="{{CSFU_url}}">Follow my shipment</a>
+                      Puede hacer seguimiento del envío haciendo clic en el siguiente link
+                      <a class="btn" href="{{CSFU_url}}">Seguir mi envio</a>
                     </p>
 
                     <br />
