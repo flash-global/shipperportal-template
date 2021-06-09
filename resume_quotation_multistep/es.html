@@ -40,31 +40,46 @@
 
                     <p>Se ha creado una nueva cotización en el ‘Shipper Portal’.</p>
                     <p>Puede seleccionar una oferta haciendo clic en el siguiente link <a class="btn" href="{{shipmentLink}}">Seleccionar oferta ahora</a></p>
-
-
                     <hr />
+                    <p><b>Points</b></p>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <th>Lugar de recogida</th>
-                        <th>Lugar de entrega</th>
+                        <th>city</th>
+                        <th>country</th>
+                        <th>street</th>
+                        <th>zip_code</th>
                       </tr>
+                      {{#quotation.points}}
                       <tr>
-                        <td align="center">
-                          <p>{{quotation.ship_from.name}}</p>
-                          <p>{{quotation.ship_from.street}}</p>
-                          <p>{{quotation.ship_from.street_other}}</p>
-                          <p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
-                        </td>
-                        <td align="center">
-                          <p>{{quotation.ship_to.name}}</p>
-                          <p>{{quotation.ship_to.street}}</p>
-                          <p>{{quotation.ship_to.street_other}}</p>
-                          <p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}} </p>
-                        </td>
+                        <td align="center">{{address.city}}</td>
+                        <td align="center">{{address.country}}</td>
+                        <td align="center">{{address.street}}</td>
+                        <td align="center">{{address.zip_code}}</td>
                       </tr>
+                      {{/quotation.points}}
                     </table>
+
                     <hr />
                     <br />
+
+                    {{#quotation.mail_extras.SECOND_DRIVER}}
+                    <div>
+                      With Second driver
+                    </div>
+                    {{/quotation.mail_extras.SECOND_DRIVER}}
+
+                    {{#quotation.mail_extras.SIDE_LOAD}}
+                    <div>
+                      With Side load
+                    </div>
+                    {{/quotation.mail_extras.SIDE_LOAD}}
+
+                    {{#quotation.mail_extras.TAIL_LIFT}}
+                    <div>
+                      With Tail lift
+                    </div>
+                    {{/quotation.mail_extras.TAIL_LIFT}}
+
 
                     <p>
                       <a class="btn" href="{{shipmentLink}}">Seleccionar oferta ahora</a>
