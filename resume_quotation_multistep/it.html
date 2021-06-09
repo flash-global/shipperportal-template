@@ -1,0 +1,68 @@
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><img style="display: block;" src="https://redspher.com/images/logo-redspher.svg" alt="redspher" width="200" /></td>
+</tr>
+<tr>
+<td style="padding: 10px 0 30px 0;">
+<table style="border: 1px solid #cccccc; border-collapse: collapse;" border="0" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="padding: 40px 30px 40px 30px;" bgcolor="#ffffff">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+<h1 style="font-size: 32px;"><strong>Nuova quotazione ricevuta</strong>&nbsp;<span style="color: red;">#{{quotation.id}}</span></h1>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px 0 30px 0; font-size: 16px; line-height: 20px;">
+<p><span style="font-weight: 400;">Gentile</span> {{firstName}} {{lastName}},</p>
+<p><span style="font-weight: 400;">Una nuova quotazione &egrave; stata creata nello Shipper Portal.</span></p>
+<p><span style="font-weight: 400;">Puoi selezionare un'offerta utilizzando questo link</span>&nbsp;<a class="btn" href="{{shipmentLink}}">Seleziona adesso un offerta</a></p>
+<hr />
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th><strong>Localit&aacute; di ritiro</strong></th>
+<th><strong>Localit&aacute; di consegna</strong></th>
+</tr>
+<tr>
+<td align="center">
+<p>{{quotation.ship_from.name}}</p>
+<p>{{quotation.ship_from.street}}</p>
+<p>{{quotation.ship_from.street_other}}</p>
+<p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
+</td>
+<td align="center">
+<p>{{quotation.ship_to.name}}</p>
+<p>{{quotation.ship_to.street}}</p>
+<p>{{quotation.ship_to.street_other}}</p>
+<p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}}</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr /><br />
+<p><a class="btn" href="{{shipmentLink}}">Seleziona adesso un offerta</a></p>
+<br /><hr /><br />
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="75%">Redspher, {{year}}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
