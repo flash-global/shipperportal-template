@@ -94,20 +94,20 @@
                       <div class="divider"></div>
                     </div>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      {{#pickup}}
                       <tr>
-                        <th>city</th>
-                        <th>country</th>
-                        <th>street</th>
-                        <th>zip_code</th>
+                        <td align="center">
+                          {{address.city}}
+                        </td>
                       </tr>
-                      {{#quotation.points}}
+                      {{/pickup}}
+                      {{#delivery}}
                       <tr>
-                        <td align="center">{{address.city}}</td>
-                        <td align="center">{{address.country}}</td>
-                        <td align="center">{{address.street}}</td>
-                        <td align="center">{{address.zip_code}}</td>
+                        <td align="center">
+                          {{address.city}}
+                        </td>
                       </tr>
-                      {{/quotation.points}}
+                      {{/delivery}}
                     </table>
 
                     <hr />
@@ -145,7 +145,7 @@
                           <span style="font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px; color: #062440;">Powerfully simple</span> <br />
                           <span style="font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px; color: #062440;">shipment manager</span> <br />
                           <br />
-                          <a class="btn-login" style="color: #fff;" href="https://shipperportal.flash.global/login">Login</a>
+                          <a class="btn-login" style="color: #fff;" href="{{loginLink}}">Login</a>
                         </td>
                       </tr>
                     </table>
@@ -153,7 +153,9 @@
                     <br>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <td width="75%">Redspher, {{year}}<br></td>
+                        <td width="75%">          
+                          <img src="https://redspher.com/wp-content/uploads/2021/08/Redspher-logo-300x169.png" width="100" height="32" alt="redspher" />
+                        </td>
                       </tr>
                     </table>
                   </td>
