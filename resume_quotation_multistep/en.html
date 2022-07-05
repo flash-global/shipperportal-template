@@ -29,11 +29,7 @@
     .center {
       text-align: center;
     }
-    .mytextdiv{
-      display:flex;
-      flex-direction:row;
-      align-items: center;
-    }
+
     .mytexttitle{
       flex-grow:0;
       font-family: 'Montserrat';
@@ -128,12 +124,20 @@
                       <a class="btn" style="font-family: Montserrat; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}">Select an offer now</a>
                     </div>
 
-                    <div class="mytextdiv">
-                      <div class="mytexttitle">
-                        Steps
-                      </div>
-                      <div class="divider"></div>
-                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="4%">
+                          <span >img</span>
+                        </td>
+                        <td width="8%">
+                          <span class="headerStep">Steps</span>
+                        </td>
+                        <td width="80%">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       {{#pickup}}
                       <tr>
@@ -156,7 +160,7 @@
                             </tr>
                           </table>
                         </td>
-                      </tr><br />
+                      </tr><br /><hr /><br />
                       {{/pickup}}
                       {{#delivery}}
                       <tr>
@@ -183,7 +187,6 @@
                       {{/delivery}}
                     </table>
 
-                    <hr />
                     <br />
 
                     {{#quotation.mail_extras.DRIVERS-TWO}}
@@ -208,9 +211,8 @@
                       <a class="btn" style="font-family: Montserrat; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}">Select an offer now</a>
                     </div>
                     <br />
-                    <hr>
                     <br>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC; padding-top: 40px; padding-bottom: 40px;">
                       <tr>
                         <td width="50%">Redspher, {{year}}</td>
                         <td width="50%">
@@ -222,7 +224,6 @@
                         </td>
                       </tr>
                     </table>
-                    <hr>
                     <br>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
