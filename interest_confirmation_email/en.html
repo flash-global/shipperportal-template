@@ -149,14 +149,14 @@
                   <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">You created a quotation on the Shipper Portal one hour ago.</span><br /><br />
                   <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">Your order hasn’t been validated yet.</span>
 
-                  <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">Are you still interested in the quotation #{{quotation.key}} from {{quotation.ship_from.city}} ({{quotation.ship_from.country}}) to {{quotation.ship_to.city}} ({{quotation.ship_to.country}}) ?</span><br /><br />
+                  <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">Are you still interested in the quotation #{{quotation.key}} from {{quotation.ship_from.city}} ({{quotation.ship_from.country_code}}) to {{quotation.ship_to.city}} ({{quotation.ship_to.country_code}}) ?</span><br /><br />
 
                   <div class="btn-container">
-                    <a class="btn" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}">Yes, I’am still interested</a>
+                    <a class="btn" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{interested_url}}">Yes, I’am still interested</a>
                   </div>
 
                   <div class="btn-container">
-                    <a class="btn-cancel" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}"><img src="https://shipperportal-front4.test.flash.global/emailImg/closeIcon.png"  alt="redspher" style="width: 11px;" />No, cancel the quote</a>
+                    <a class="btn-cancel" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{not_interested_url}}"><img src="https://shipperportal-front4.test.flash.global/emailImg/closeIcon.png"  alt="redspher" style="width: 11px;" />No, cancel the quote</a>
                   </div>
 
                   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC;">
