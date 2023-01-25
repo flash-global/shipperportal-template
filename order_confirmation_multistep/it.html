@@ -26,22 +26,20 @@
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
-<th>Localit&aacute; di ritiro</th>
-<th>Localit&aacute; di consegna</th>
+    <th>Città</th>
+    <th>Nazione</th>
+    <th>Via</th>
+    <th>CAP</th>
 </tr>
 <tr>
-<td align="center">
-<p>{{quotation.ship_from.name}}</p>
-<p>{{quotation.ship_from.street}}</p>
-<p>{{quotation.ship_from.street_other}}</p>
-<p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
-</td>
-<td align="center">
-<p>{{quotation.ship_to.name}}</p>
-<p>{{quotation.ship_to.street}}</p>
-<p>{{quotation.ship_to.street_other}}</p>
-<p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}}</p>
-</td>
+    {{#quotation.points}}
+<tr>
+    <td align="center">{{address.city}}</td>
+    <td align="center">{{address.country}}</td>
+    <td align="center">{{address.street}}</td>
+    <td align="center">{{address.zip_code}}</td>
+</tr>
+{{/quotation.points}}
 </tr>
 </tbody>
 </table>

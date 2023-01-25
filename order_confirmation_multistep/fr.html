@@ -47,22 +47,20 @@
                     <hr />
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <th>Lieu de ramassage</th>
-                        <th>Lieu de livraison</th>
+                        <th>Ville</th>
+                        <th>Pays</th>
+                        <th>Rue</th>
+                        <th>Code Postal</th>
                       </tr>
                       <tr>
-                        <td align="center">
-                          <p>{{quotation.ship_from.name}}</p>
-                          <p>{{quotation.ship_from.street}}</p>
-                          <p>{{quotation.ship_from.street_other}}</p>
-                          <p>{{quotation.ship_from.country_code}} / {{quotation.ship_from.zip_code}} / {{quotation.ship_from.city}}</p>
-                        </td>
-                        <td align="center">
-                          <p>{{quotation.ship_to.name}}</p>
-                          <p>{{quotation.ship_to.street}}</p>
-                          <p>{{quotation.ship_to.street_other}}</p>
-                          <p>{{quotation.ship_to.country_code}} / {{quotation.ship_to.zip_code}} / {{quotation.ship_to.city}} </p>
-                        </td>
+                        {{#quotation.points}}
+                      <tr>
+                        <td align="center">{{address.city}}</td>
+                        <td align="center">{{address.country}}</td>
+                        <td align="center">{{address.street}}</td>
+                        <td align="center">{{address.zip_code}}</td>
+                      </tr>
+                      {{/quotation.points}}
                       </tr>
                     </table>
                     <hr />
