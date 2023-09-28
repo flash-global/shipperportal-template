@@ -7,60 +7,208 @@
   <style type="text/css">
     .btn {
       padding: 8px 16px;
-      border-radius: 8px;
-      background: #6DB8FF;
-      color: #FFF;
+      border-radius: 40px;
+      background: #1436D3;
+      color: #FFF !important;
       text-decoration: none;
+      margin: auto;
+    }
+
+    .btn-login {
+      padding: 8px 16px;
+      border-radius: 40px;
+      border: 1px solid #1436D3;
+      color: #062440 !important;
+      text-decoration: none;
+
+      margin: auto;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .btn-container {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+    }
+
+    .mytexttitle{
+      flex-grow:0;
+      font-family: Arial,sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: #062440;
+    }
+
+    .divider{
+      flex-grow:1;
+      height: 1px;
+      background-color: #AFB9C4;
+      opacity: 0.25;
+    }
+
+    .headerGreyStep {
+      font-family: Arial,sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #AFB9C4;
+    }
+
+    .headerStep {
+      font-family: Arial,sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #062440;
+    }
+
+    .bodyBoldStep {
+      font-family: Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #062440;
+    }
+
+    .bodyStep {
+      font-family: Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #062440;
+    }
+
+    hr {
+      margin-top: 11px;
+      border-top: 1px solid #AFB9C4;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
     }
   </style>
 </head>
 
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #153643; background-color:#EFEFEF">
+<body style="color: #062440; ">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="800">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="padding-bottom: 18px; padding-left: 15px;">
       <tr>
-        <td><img src="https://redspher.com/images/logo-redspher.svg" width="200" alt="redspher" style="display: block;" /></td>
+        <td>
+          <img src="https://shipperportal-front4.test.flash.global/emailImg/logoNameRedspher.png" width="100" height="32" alt="redspher" />
+        </td>
         <br>
       </tr>
     </table>
     <tr>
-      <td style="padding: 10px 0 30px 0;">
-        <table align="center" border="0" cellpadding="0" cellspacing="0" width="800" style="border: 1px solid #cccccc; border-collapse: collapse;">
+      <td>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="800">
           <tr>
-            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+            <td>
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
-                    <h1 style="font-size: 32px">New quotation received <span style="color:red">#{{quotation.key}}</span></h1>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr style="background-color: #1436D3;">
+                        <td width="50%" style="padding-top: 32px; padding-left: 15px; padding-bottom: 52px;">
+                          <span style="font-family: Arial,sans-serif; font-size: 32px; font-weight: 700; line-height: 39px; letter-spacing: 0em; text-align: left; color: #FFFFFF;">New quotation</span> <br />
+                          <span style="font-family: Arial,sans-serif; font-size: 32px; font-weight: 700; line-height: 39px; letter-spacing: 0em; text-align: left; color: #FFFFFF;">received</span> <br />
+                          <span style="font-family: Arial,sans-serif; font-size: 18px; font-weight: 700; line-height: 24px; letter-spacing: 0em; text-align: left; color: #FFFFFF;">on #{{quotation.key}}</span>
+                        </td>
+                        <td width="50%">
+                          <img src="https://shipperportal-front4.test.flash.global/emailImg/quoteCreationIllustration.png"  alt="redspher" style="width: 200px;"  />
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 20px 0 30px 0;font-size: 16px; line-height: 20px;">
-                    <p>Dear {{firstName}} {{lastName}},</p>
+                    <span style="font-family: Arial,sans-serif; font-size: 18px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: left; color: #062440;">Dear </span>
+                    <span style="font-family: Arial,sans-serif; font-size: 18px; font-weight: 700; line-height: 24px; letter-spacing: 0em; text-align: left; color: #062440;">{{firstname}} {{lastname}},</span> <br /><br />
 
-                    <p>A new quotation was created on the shipper portal.</p>
-                    <p>You can select an offer by following this link <a class="btn" href="{{shipmentLink}}">Select an offer now</a></p>
+                    <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">A new quotation was created on the shipper portal. </span><br /><br />
+                    <span style="font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: left; color: #062440;">You can select an offer by following this link: </span>
 
-                    <hr />
-                    <p><b>Points</b></p>
+                    <div class="btn-container">
+                      <a class="btn" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}">Select an offer now</a>
+                    </div>
+
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <th>city</th>
-                        <th>country</th>
-                        <th>street</th>
-                        <th>zip_code</th>
+                        <td width="3%">
+                          <img src="https://shipperportal-front4.test.flash.global/emailImg/PinIcon.png"  alt="redspher" style="width: 11px;" />
+                        </td>
+                        <td width="8%">
+                          <span class="headerStep">Steps</span>
+                        </td>
+                        <td width="80%">
+                          <hr />
+                        </td>
                       </tr>
-                      {{#quotation.points}}
-                      <tr>
-                        <td align="center">{{address.city}}</td>
-                        <td align="center">{{address.country}}</td>
-                        <td align="center">{{address.street}}</td>
-                        <td align="center">{{address.zip_code}}</td>
-                      </tr>
-                      {{/quotation.points}}
                     </table>
 
-                    <hr />
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      {{#pickup}}
+                      <tr>
+                        <td>
+                          <span class="headerGreyStep">Pickup</span> <br />
+                          <span class="headerStep">{{point.contact.company_name}}</span> <br /><br />
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td width="50%">
+                                <span class="headerGreyStep">Address</span> <br />
+                                <span class="bodyStep">{{point.address.street}}</span> <br />
+                                <span class="bodyStep">{{point.address.zip_code}} - </span><span class="bodyBoldStep">{{point.address.city}}</span> <br />
+                                <span class="bodyStep">{{point.address.country}}</span> <br />
+                              </td>
+                              <td width="50%">
+                                <span class="headerGreyStep">Expected pickup</span> <br />
+                                <span class="bodyBoldStep">{{shortDate}}</span> <br />
+                                <span class="bodyStep">{{dateTime}}</span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr><br /><hr /><br />
+                      {{/pickup}}
+                      {{#delivery}}
+                      <tr>
+                        <td>
+                          <span class="headerGreyStep">Delivery</span> <br />
+                          <span class="headerStep">{{point.contact.company_name}}</span> <br /><br />
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td width="50%">
+                                <span class="headerGreyStep">Address</span> <br />
+                                <span class="bodyStep">{{point.address.street}}</span> <br />
+                                <span class="bodyStep">{{point.address.zip_code}} - </span><span class="bodyBoldStep">{{point.address.city}}</span> <br />
+                                <span class="bodyStep">{{point.address.country}}</span> <br />
+                              </td>
+                              <td width="50%">
+                                <span class="headerGreyStep">Expected delivery</span> <br />
+                                <span class="bodyBoldStep">{{shortDate}}</span> <br />
+                                <span class="bodyStep">{{dateTime}}</span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      {{/delivery}}
+                    </table>
+
                     <br />
 
                     {{#quotation.mail_extras.DRIVERS-TWO}}
@@ -81,15 +229,28 @@
                     </div>
                     {{/quotation.mail_extras.TAIL_LIFT}}
 
-                    <p>
-                      <a class="btn" href="{{shipmentLink}}">Select an offer now</a>
-                    </p>
-                    <br />
-                    <hr>
-                    <br>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <div class="btn-container">
+                      <a class="btn" style="font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: center;" href="{{shipmentLink}}">Select an offer now</a>
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8FAFC;">
                       <tr>
-                        <td width="75%">Redspher, {{year}}<br>
+                        <td width="50%">
+                          <img src="https://shipperportal-front4.test.flash.global/emailImg/bottomIllustration.png" alt="redspher" style="width: 300px;" />
+                        </td>
+                        <td width="50%">
+                          <span style="font-family: Arial,sans-serif; font-style: normal; font-weight: 800; font-size: 24px; line-height: 29px; color: #062440;">Shipper Portal </span> <br />
+                          <span style="font-family: Arial,sans-serif; font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px; color: #062440;">Powerfully simple</span> <br />
+                          <span style="font-family: Arial,sans-serif; font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px; color: #062440;">shipment manager</span> <br />
+                          <br />
+                          <a class="btn-login" style="color: #fff;" href="{{loginLink}}">Login</a>
+                        </td>
+                      </tr>
+                    </table>
+                    <br>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-left: 15px;">
+                      <tr>
+                        <td width="75%">          
+                          <img src="https://shipperportal-front4.test.flash.global/emailImg/logoRedspher.png" alt="redspher" style="width: 32px;" />
                         </td>
                       </tr>
                     </table>
